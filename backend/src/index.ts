@@ -1,7 +1,12 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
+
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Trust Nginx as the proxy
+app.set('trust proxy', 1); 
 
 // Serve static files from the React app's build directory
 app.use(express.static(path.join(__dirname, 'client/dist')));
