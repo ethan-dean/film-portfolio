@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the frontend directory and run the build command
-cd frontend || { echo "Failed to navigate to frontend directory"; exit 1; }
+cd /root/services/frontend || { echo "Failed to navigate to frontend directory"; exit 1; }
 echo "Running npm build in frontend..."
 npm run build || { echo "npm build failed"; exit 1; }
 
