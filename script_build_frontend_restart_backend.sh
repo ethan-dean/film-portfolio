@@ -16,6 +16,10 @@ rm -rf ./src/client/dist || { echo "Failed to remove old files"; exit 1; }
 echo "Copying files from frontend/dist to backend/src/client/dist..."
 cp -r ../frontend/dist ./src/client || { echo "File copy failed"; exit 1; }
 
+# Killing existing backend if it exists
+echo "Killing existing backend if exists..."
+pkill -f node || { echo "found nothing to kill"; }
+
 # Run the backend start command
 echo "Starting the backend..."
 npm run start || { echo "npm start failed"; exit 1; }
