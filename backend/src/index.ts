@@ -2,6 +2,11 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
+const { TheCatAPI } = require("@thatapicompany/thecatapi");
+require("dotenv").config()
+
+const theCatAPI = new TheCatAPI(process.env.API_KEY);
+
 const app = express();
 const port = process.env.PORT || 3000;
 
