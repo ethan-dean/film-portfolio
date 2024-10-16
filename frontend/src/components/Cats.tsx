@@ -1,9 +1,22 @@
+import { useState, useEffect } from 'react'
 
 function Cats() {
+
+  const [imgSrc, setImgSrc] = useState("");
+
+  try {
+    useEffect(() => {
+      fetch("https://allyfarace.com/v1/cat")
+        .then((res) => res.json())
+        .then((data) => setImgSrc(data.url))
+    }, []) 
+  } catch (e) {
+    console.log("Error: Unable to fetch image... "+ {e})
+  }
   
   return (
     <>
-      <p>Cats</p>
+      <img src={imgSrc}/>
     </>
   )
 }
