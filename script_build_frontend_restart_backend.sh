@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Add a git pull at the top here
+
 # Navigate to the frontend directory and run the build command
 cd /root/services/frontend || { echo "Failed to navigate to frontend directory"; exit 1; }
 echo "Running npm build in frontend..."

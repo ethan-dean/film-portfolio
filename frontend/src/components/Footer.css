@@ -1,0 +1,17 @@
+.footer-div {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  width: fit-content;
+}
+
+.footer-link {
+  color: black;
+}
+
+.footer-link:hover {
+  font-weight: 600;
+  color: rgb(48, 0, 0)
+}

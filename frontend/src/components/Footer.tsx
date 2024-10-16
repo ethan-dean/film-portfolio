@@ -1,10 +1,14 @@
+import './Footer.css'
 
 function Footer() {
   
   return (
-    <>
-      <p>&copy;{(new Date()).getFullYear()} Ethan Dean</p>
-    </>
+    <div className='footer-div'>
+      <p className='footer-text'>
+        &copy;{(new Date()).getFullYear()}&nbsp;
+        <a className='footer-link' href='https://github.com/ethan-dean' target='blank_'>Ethan Dean</a>
+      </p>
+    </div>
   )
 }
 
