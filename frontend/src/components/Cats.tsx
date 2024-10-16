@@ -16,7 +16,7 @@ function Cats() {
   
   return (
     <>
-      <img src={imgSrc}/>
+      <img className="cats-image" src={imgSrc ? imgSrc : "/imdb-icon.jpg"}/>
     </>
   )
 }

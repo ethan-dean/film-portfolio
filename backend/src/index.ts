@@ -15,8 +15,9 @@ app.set('trust proxy', 1);
 app.get('/v1/cat', async (req: any, res: any) => {
    try 
    {
-       const [image] = await theCatAPI.images.searchImages();
-       res.json({ url: image.url });
+       const [image] = await theCatAPI.images.searchImages({limit: 10,});
+       console.log(image)
+       res.status(200).json({ url: image.url });
    } 
    catch (error)
    {
