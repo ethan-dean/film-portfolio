@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import About from './components/About.tsx'
 import Cats from './components/Cats.tsx'
 import Navbar from './components/Navbar.tsx'
+import Footer from './components/Footer.tsx'
 
 import './App.css'
 
@@ -26,6 +27,7 @@ function App() {
     <div className="app" >
       <Navbar handleClick={handlePageClick}/>
       {getCurPageElement()}
+      <Footer/>
     </div>
   )
 }

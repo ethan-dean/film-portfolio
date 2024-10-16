@@ -1,6 +1,11 @@
+.about {
+  margin-bottom: 100px;
+}
+
 .about-container {
   display: flex;
   align-items: top;
+  margin-bottom: 20px;
 }
 
 .about-text-container {
@@ -37,10 +42,14 @@
 }
 
 .about-image-2 {
+  position: relative;
+  top: 60px;
   width: 250px;
 }
 
 .about-image-3 {
   position: relative;
   width: 250px;
+  top: 0px;
+  left: -20px;
 }

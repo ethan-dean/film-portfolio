@@ -1,6 +1,14 @@
 .footer-div {
+  position: absolute;
+  bottom: -470px;
+  left: 0px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  min-width: 100vw;
+
+  background-color: rgb(236, 227, 235);
 }
 
 .footer-text {
@@ -13,5 +21,4 @@
 
 .footer-link:hover {
   font-weight: 600;
-  color: rgb(48, 0, 0)
 }
