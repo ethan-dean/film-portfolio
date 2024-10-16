@@ -12,9 +12,17 @@ const port = process.env.PORT || 3000;
 app.set('trust proxy', 1); 
 
 // Provide API endpoint to get random cat picture
-app.get('/v1/cat', async (req: any, res:any) => {
-   const image = await theCatAPI.images.searchImages();
-   res.sendFile(image);
+app.get('/v1/cat', async (req: any, res: any) => {
+   try 
+   {
+       const [image] = await theCatAPI.images.searchImages();
+       res.json({ url: image.url });
+   } 
+   catch (error)
+   {
+       console.error("Error fetching cat image:", error);
+       res.status(500).send("Failed to fetch cat image");
+   }
 });
 
 // Serve static files from the React app's build directory
