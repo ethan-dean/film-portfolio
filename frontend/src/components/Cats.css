@@ -1,15 +1,14 @@
 .cats {
+  width: 1000px;
+  margin: 0px 100px;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-content: center;
-  justify-content: center;
   align-items: center;
 }
 
 .cats-image {
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 50vw;
+  max-height: 50vh;
 
   border: 3px solid hsl(311, 71%, 50%);
   border-radius: 25px;

@@ -1,7 +1,4 @@
 .footer-div {
-  position: absolute;
-  bottom: -470px;
-  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
