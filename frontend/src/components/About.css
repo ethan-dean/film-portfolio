@@ -4,12 +4,12 @@
 
 .about-container {
   display: flex;
-  align-items: top;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .about-text-container {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-right: 50px;
 }
 
