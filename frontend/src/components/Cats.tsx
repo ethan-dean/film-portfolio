@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
+import './Cats.css'
 
 function Cats() {
 
-  const numImagesPerFetch = 10;
+  const numImagesPerFetch = 100;
 
   const [ imgUrlList, setImgUrlList ] = useState("");
   const [ curImgIdx, setCurImgIdx ] = useState(0);
@@ -27,10 +28,10 @@ function Cats() {
   }, [])
 
   return (
-    <>
-      <img className="cats-image" src={imgUrlList ? imgUrlList[curImgIdx] : "/imdb-icon.jpg"}/>
+    <div className="cats">
       <button className="cats-button" onClick={handleClickRandom}>Random</button>
-    </>
+      <img className="cats-image" src={imgUrlList ? imgUrlList[curImgIdx] : "/imdb-icon.jpg"}/>
+    </div>
   )
 }
 
