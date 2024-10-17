@@ -10,16 +10,37 @@
 .cats-image {
   max-width: 800px;
   max-height: 800px;
+
+  border: 3px solid hsl(311, 71%, 50%);
+  border-radius: 25px;
 }
 
 .cats-button {
   width: 200px;
   margin-top: -30px;
   margin-bottom: 50px;
+  padding: 2px 0px;
 
   font-size: 40px;
-  background-color: rgb(253, 252, 253);
+  background-color: hsl(300, 20%, 99%);
   color: hsl(311, 71%, 50%);
   border: 3px solid hsl(311, 71%, 50%);
   border-radius: 5px;
+}
+
+.cats-button:hover {
+  cursor: pointer;
+  background-color: hsl(300, 20%, 93%);
+  color: hsl(311, 71%, 40%);
+  border: 3px solid hsl(311, 71%, 40%);
+}
+
+.cats-button:active {
+  cursor: pointer;
+  background-color: hsl(300, 20%, 87%);
+  color: hsl(311, 71%, 30%);
+  border: 4px solid hsl(311, 71%, 30%);
+  box-shadow: 5px 5px rgb(0, 0, 0) 2px;
+  font-size: 42px;
+  padding: 0px 0px;
 }
