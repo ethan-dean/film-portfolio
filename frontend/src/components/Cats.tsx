@@ -4,17 +4,24 @@ import Loading from './loading-module/loading.tsx'
 
 function Cats() {
 
-  const numImagesPerFetch = 100;
+  const numImagesPerFetch = 10;
 
   const [ imgUrlList, setImgUrlList ] = useState("");
   const [ curImgIdx, setCurImgIdx ] = useState(0);
 
-  const handleClickRandom = () => {
-    const next = (curImgIdx + 1) % numImagesPerFetch;
-    setCurImgIdx(next);
+  const handleClickRandom = async () => {
+    // Only increment if images have loaded
+    if (imgUrlList) {
+      if (curImgIdx == (numImagesPerFetch - 1)) {
+        setImgUrlList("");
+        await getImgUrls()
+      }
+      const next = (curImgIdx + 1) % numImagesPerFetch;
+      setCurImgIdx(next);
+    }
   };
 
-  const getImgUrls = () => {
+  const getImgUrls = async () => {
     try {
       fetch("https://allyfarace.com/v1/cat")
         .then((res) => res.json())

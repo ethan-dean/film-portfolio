@@ -33,7 +33,7 @@ function About() {
         </div>
         <div className="about-text-container">
           <p className="about-text-body">"Doubt thou the stars are fire, doubt that the sun doth move, but never doubt that Ally is a wonder, unmatched and unrivaled. She is my muse, my love, my everything."</p>
-          <p className="about-text-body">- Shakespeare... I think</p>
+          <p className="about-text-body">- Shakespeare... maybe...</p>
         </div>
       </div>
     </div>
