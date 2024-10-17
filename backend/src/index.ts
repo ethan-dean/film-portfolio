@@ -19,7 +19,7 @@ app.get('/v1/cat', async (req: any, res: any) => {
        const urlList = imageList.map((image: any) => {
          return image.url;
        });
-       res.status(200).json({ urlList: urlList[0] });
+       res.status(200).json({ urlList: JSON.stringify(urlList) });
    } 
    catch (error)
    {
