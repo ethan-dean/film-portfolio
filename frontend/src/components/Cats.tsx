@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Cats.css'
+import Loading from './loading-module/loading.tsx'
 
 function Cats() {
 
@@ -30,7 +31,12 @@ function Cats() {
   return (
     <div className="cats">
       <button className="cats-button" onClick={handleClickRandom}>Random</button>
-      <img className="cats-image" src={imgUrlList ? imgUrlList[curImgIdx] : "/imdb-icon.jpg"}/>
+      {
+        imgUrlList ? 
+          <img className="cats-image" src={imgUrlList[curImgIdx]}/>
+        :
+          <Loading />
+      }
     </div>
   )
 }
