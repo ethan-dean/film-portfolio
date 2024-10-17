@@ -26,13 +26,19 @@ function About() {
           <img className="about-image-1" src="/ally-1.png" />
         </div>
       </div>
-      <div className="about-container">
+      <div className="about-container rev">
         <div className="about-image-container">
           <img className="about-image-2" src="/ally-2.png" />
           <img className="about-image-3" src="/ally-3.png" />
         </div>
         <div className="about-text-container">
-          <p className="about-text-body">"Doubt thou the stars are fire, doubt that the sun doth move, but never doubt that Ally is a wonder, unmatched and unrivaled. She is my muse, my love, my everything."</p>
+          <p className="about-text-body">
+            "Doubt thou the stars are fire,
+             doubt that the sun doth move,
+             but never doubt that Ally is a wonder,
+             unmatched and unrivaled.
+             She is my muse, my love, my everything."
+            </p>
           <p className="about-text-body">- Shakespeare... maybe...</p>
         </div>
       </div>
